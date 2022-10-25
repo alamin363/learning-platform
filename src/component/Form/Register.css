@@ -7,15 +7,13 @@
 }
 .btn-rg,.inputs{
   padding: 10px 90px;
-  display: flex;
   outline: none;
-  
-}
-.inputs
-.btn-rg{
-  border: none;
   border: 2px solid;
+}
+.btn-rg{
+  /* border: 2px solid; */
   cursor: pointer;
+  width: 350px;
 }
 .underline{
   height: 2px;
