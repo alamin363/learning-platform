@@ -1,0 +1,44 @@
+
+.text{
+  font-size: 20px;
+}
+.online-login{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+.online-login button{
+  border: none;
+  box-shadow: 1px 1px 1px 1px black;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.online-login input{
+  padding: 11px 38px;
+  border: 1px solid black;
+  outline: none;
+}
+.online-login button:hover{
+  color: rgb(0, 68, 255);
+}
+::placeholder{
+  color: gray;
+  font-size: 20px;
+}
+.input-feld{
+  position: relative;
+  margin-top: 10px;
+}
+.email{
+  position: absolute;
+  right: 210px;
+  bottom: 10px;
+}
+.btn{
+  margin-top: 10px;
+  width: 245px;
+  background-color: blueviolet;
+}

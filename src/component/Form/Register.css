@@ -1,0 +1,26 @@
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+}
+form>input{
+  width: 180px;
+  display: flex;
+  
+}
+button, input{
+  border: none;
+  /* box-shadow: 1px 1px 1px 1px black; */
+  border: 2px solid;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: 200px;
+}
+.underline{
+  height: 2px;
+  width: 240px;
+  background-color: black;
+}
