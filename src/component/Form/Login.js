@@ -2,13 +2,23 @@ import React from "react";
 import "./Login.css";
 import { FaGoogle, FaGithub, FaLock, FaMailBulk } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { authContext } from "../../context/Context";
 const Login = () => {
-
+ const {sineinWithEmailPass} = useContext(authContext)
   const handelSubmit = event =>{
     event.preventDefault()
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    sineinWithEmailPass(email, password)
+    .then(userCrate => {
+      const user = userCrate.user;
+      console.log(user);
+    })
+    .catch(error => {
+      const errors = error.message;
+    })
   }
   return (
     <div>
