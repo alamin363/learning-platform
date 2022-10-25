@@ -1,7 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../../context/Context';
 
 const Navber = () => {
+  const {user} = useContext(authContext);
+  console.log(user);
   return (
     <div>
       <Link to='/'>Home</Link>

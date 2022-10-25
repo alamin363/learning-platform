@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { authContext } from "../../context/Context";
 const Login = () => {
- const {sineinWithEmailPass} = useContext(authContext)
+ const {sineinWithEmailPass, sineOut} = useContext(authContext)
   const handelSubmit = event =>{
     event.preventDefault()
     const form = event.target;
@@ -19,6 +19,11 @@ const Login = () => {
     .catch(error => {
       const errors = error.message;
     })
+  }
+  const handelLogOut = () =>{
+    sineOut()
+    .then(()=>{})
+    .catch(error => {})
   }
   return (
     <div>
@@ -40,6 +45,7 @@ const Login = () => {
       </div>
       <button className="btn">Log In</button>
       </form>
+      <button onClick={handelLogOut} className="btn">Log Out</button>
       <p>or <Link>Forget Password</Link></p>
       <p>Don't have an account? <Link to="/register">Sing Up</Link></p>
      </div>
