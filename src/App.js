@@ -14,7 +14,8 @@ const router = createBrowserRouter([
     {path:'/blog', element:<Blog /> },
     {path:'/course', element:<Course />},
     {path:'/login', element:<Login />},
-    {path:"/register", element:<Register />}
+    {path:"/register", element:<Register />},
+    {path:'*', element: <h1>this is error page</h1>}
   ]}
 ])
 function App() {

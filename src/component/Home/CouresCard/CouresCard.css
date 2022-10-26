@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ .fullpage{
+  /* background-color: gray;
+  background-image: url(); */
+  /* background-size: cover;
+  background-position: center;
+  min-height: 100vh; */
+  display: grid;
+  justify-items: center;
+  /* grid-template-columns: repeat(2, 2fr); */
+} 
+.cart-body{
+ max-width: 500px;
+ min-width:400px;
+ height: 600px;
+ background: rgba(255, 255, 255, 0.1);
+ border-radius: 5px;
+ margin: 10px;
+ backdrop-filter: blur(20px);
+ box-shadow:0 25px 25px rgba(0,0,0,0.1);
+}
+.course-img{
+  width: 400px;
+  height: 300px;
+  border-top-right-radius:5px;
+  border-top-left-radius:5px;
+}

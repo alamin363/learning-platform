@@ -2,16 +2,21 @@ import React from 'react';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { authContext } from '../../context/Context';
-
+import Headers from '../Header/Header'
+import CouresCard from './CouresCard/CouresCard';
+import './Home.css'
 const Home = () => {
   const data = useLoaderData()
   console.log(data)
   const {name} = useContext(authContext);
 
   return (
-    <div>
-      {data.map(singleData => <h1>{singleData.Instructor}</h1>)}
+    <>
+    <Headers />
+    <div className='home-component'>
+      {data.map(singleCoures => <CouresCard key={singleCoures.id} data={singleCoures}/>)}
     </div>
+    </>
   );
 };
 

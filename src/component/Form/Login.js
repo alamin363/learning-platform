@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { authContext } from "../../context/Context";
 const Login = () => {
- const {sineinWithEmailPass, sineOut} = useContext(authContext)
+ const {sineinWithEmailPass, SigninWithGoogle, sineOut, loginWithGithub} = useContext(authContext)
   const handelSubmit = event =>{
     event.preventDefault()
     const form = event.target;
@@ -25,13 +25,34 @@ const Login = () => {
     .then(()=>{})
     .catch(error => {})
   }
+  const handelGoogleSignIn =()=>{
+    SigninWithGoogle()
+    .then(result => {
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+    })
+  }
+  const handelGithublogin = () =>{
+    loginWithGithub()
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+    }
+  
+  )}
   return (
     <div>
      <div className="online-login">
-     <button className="btn-fblogin">
+     <button onClick={handelGoogleSignIn} className="btn-fblogin">
         <FaGoogle style={{fontSize:"15px", color:"green"}}/> <span className="text">Login With Google</span>
       </button>
-      <button className="btn-fblogin">
+      <button onClick={handelGithublogin} className="btn-fblogin">
         <FaGithub style={{fontSize:"15px", color:"black"}}/> <span className="text">Login With Google</span>
       </button>
       <form onSubmit={handelSubmit}>
