@@ -23,6 +23,7 @@ const CouresCard = ({ data }) => {
            className="btn-course">Show Details <FaArrowRight /></Link></div>
         </div>
       </div>
+
     </div>
   );
 };

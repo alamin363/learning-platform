@@ -4,11 +4,19 @@
   background-position: center;
   min-height: 100vh; 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:4fr 1fr;
+}
+.cart{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 @media screen and (max-width: 800px) {
   .component-course{
     display: grid;
     grid-template-columns:repeat(1, 1fr);
+  }
+  .cart{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
   }
 }

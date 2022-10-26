@@ -14,8 +14,8 @@
   /* grid-template-columns: repeat(2, 2fr); */
 } 
 .cart-body{
- max-width: 500px;
- min-width:400px;
+ max-width: 400px;
+ min-width:300px;
  height: 500px;
  background: rgba(255, 255, 255, 0.1);
  border-radius: 5px;
@@ -60,7 +60,7 @@
 }
 @media screen and (min-width: 1000px) {
   .course-img{
-    width:500px;
+    width:400px;
   }
   
 }
@@ -76,6 +76,6 @@
    }
   .course-img{
     
-    width:400px;
+    width:300px;
   }
 }

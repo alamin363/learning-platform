@@ -1,17 +1,18 @@
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
-import { FaCode, FaMale } from "react-icons/fa";
+import { FaCode, FaLightbulb, FaMale, FaRegLightbulb } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { authContext } from "../../context/Context";
 import "./Navber.css";
 const Navber = () => {
+  const [toggole, setToggole] = useState(true)
   const { user, sineOut } = useContext(authContext);
   const handelLogOut = () => {
     sineOut()
       .then(() => {})
       .catch((error) => {});
   };
-  console.log(user);
   return (
     <div className="nav-container">
       <div>
@@ -34,10 +35,14 @@ const Navber = () => {
             Login
           </Link>
         )}
-        {user?.photoURL && <span title={user?.displayName
-}><img className="user-img" src={user?.photoURL} alt="" /></span>}
+        {user?.photoURL && (
+          <span title={user?.displayName}>
+            <img className="user-img" src={user?.photoURL} alt="" />
+          </span>
+        )}
+
+        <Link onClick={() => setToggole(!toggole)}>{toggole ? <FaLightbulb /> : <FaRegLightbulb />}</Link>
       </div>
-      
     </div>
   );
 };
