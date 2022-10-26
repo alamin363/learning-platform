@@ -1,0 +1,21 @@
+.nav-container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #FFFFFF;
+}
+.name-web{
+  font-size: 30px;
+  text-decoration: none;
+}
+.nave-link>a{
+  text-decoration: none;
+  margin-right: 10px;
+  color: gray;
+}
+.btn-login{
+ border: 1px solid black;
+}
+.btn-register{
+  border: 1px solid black;
+} 

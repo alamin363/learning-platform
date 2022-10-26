@@ -1,11 +1,15 @@
 import React from "react";
 import "./Login.css";
 import { FaGoogle, FaGithub, FaLock, FaMailBulk } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { authContext } from "../../context/Context";
 const Login = () => {
- const {sineinWithEmailPass, SigninWithGoogle, sineOut, loginWithGithub} = useContext(authContext)
+ const {sineinWithEmailPass, SigninWithGoogle, sineOut, loginWithGithub} = useContext(authContext);
+ 
+ const location = useLocation()
+ const navigate = useNavigate();
+ const from = location.state?.from?.pathname || '/';
   const handelSubmit = event =>{
     event.preventDefault()
     const form = event.target;
@@ -14,22 +18,25 @@ const Login = () => {
     sineinWithEmailPass(email, password)
     .then(userCrate => {
       const user = userCrate.user;
-      console.log(user);
+      // console.log(user);
+      // 
+      navigate(from, {replace:true})
     })
     .catch(error => {
       const errors = error.message;
     })
   }
-  const handelLogOut = () =>{
-    sineOut()
-    .then(()=>{})
-    .catch(error => {})
-  }
+  // const handelLogOut = () =>{
+  //   sineOut()
+  //   .then(()=>{})
+  //   .catch(error => {})
+  // }
   const handelGoogleSignIn =()=>{
     SigninWithGoogle()
     .then(result => {
       const user = result.user;
-      console.log(user)
+      // console.log(user);
+      navigate(from, {replace:true})
     })
     .catch(error => {
       const errorMessage = error.message;
@@ -40,6 +47,7 @@ const Login = () => {
     .then(result => {
       const user = result.user;
       console.log(user);
+      navigate(from, {replace:true})
     })
     .catch(error => {
       const errorMessage = error.message;
@@ -66,7 +74,6 @@ const Login = () => {
       </div>
       <button className="btn">Log In</button>
       </form>
-      <button onClick={handelLogOut} className="btn">Log Out</button>
       <p>or <Link>Forget Password</Link></p>
       <p>Don't have an account? <Link to="/register">Sing Up</Link></p>
      </div>

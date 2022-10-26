@@ -22,23 +22,28 @@ const Context = ({ children }) => {
   
   const [user, setUser] = useState("");
   const [loader, setLoader] = useState(true);
-  
+
   const googleProvider = new GoogleAuthProvider();
   const gitHubProvider = new GithubAuthProvider();
   const SigninWithGoogle =() =>{
+    setLoader(true)
    return signInWithPopup(auth, googleProvider)
   }
   const loginWithEmailPass = (email, password) => {
+    setLoader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
 const loginWithGithub = () =>{
   return signInWithPopup(auth, gitHubProvider)
 }
   const sineinWithEmailPass = (email, password) => {
+    setLoader(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const sineOut = () => {
+    setLoader(true);
     return signOut(auth);
   };
 

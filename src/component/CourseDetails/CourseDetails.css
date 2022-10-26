@@ -27,7 +27,7 @@
   color: white;
 }
 .titel{
-  font-size: 25px;
+  font-size: 20px;
 }
 /* .city{
   margin-bottom: 5px;
@@ -62,7 +62,7 @@
 }
 @media screen and (min-width:1000px) {
   .details{
-    background: gray;
+    /* background:linear-gradient(#06D7A1); */
     width: 100vw;
     min-height: 100vh;
   }

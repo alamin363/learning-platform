@@ -8,6 +8,7 @@ import Course from "./component/Cources/Cources";
 import Login from "./component/Form/Login";
 import Register from "./component/Form/Register";
 import CourseDetails from "./component/CourseDetails/CourseDetails";
+import PrivetRout from "./component/PrivetRout/PrivetRout";
 
 const router = createBrowserRouter([
   {
@@ -16,20 +17,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:4000/"),
+        loader: () => fetch("https://backend-cores-server-alaminpk360.vercel.app/"),
         element: <Home />,
       },
       { path: "/blog", element: <Blog /> },
       {
         path: "/course/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/course/${params.id}`),
-        element: <CourseDetails />,
+          fetch(`https://backend-cores-server-alaminpk360.vercel.app/course/${params.id}`),
+        element: <PrivetRout><CourseDetails /></PrivetRout>,
       },
       { path: "/login", element: <Login /> },
       {
         path: "/course",
-        loader: () => fetch("http://localhost:4000/"),
+        loader: () => fetch("https://backend-cores-server-alaminpk360.vercel.app/"),
         element: <Course />,
       },
       { path: "/register", element: <Register /> },

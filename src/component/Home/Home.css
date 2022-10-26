@@ -7,3 +7,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.btn-div{
+  width: 500px;
+  margin-top: 20px;
+  margin: auto;
+}
+.btn-home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid;
+  text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+  .home-component{
+    display: grid;
+    grid-template-columns:repeat(1, 1fr);
+  }
+}
