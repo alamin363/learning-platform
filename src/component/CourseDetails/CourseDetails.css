@@ -29,17 +29,36 @@
 .titel{
   font-size: 25px;
 }
-.city{
-  margin-bottom: 30px;
+/* .city{
+  margin-bottom: 5px;
+} */
+.button-register-user{
+ display: grid;
+ justify-items: center;
+}
+.button-register-user>a{
+  padding: 10px 100px;
 }
 .btn-addToCart{
   border:2px solid ;
   text-align: center;
   color: white;
+  text-decoration: none;
 }
-.btn-addToCart>a{
- color: white;
- text-decoration: none;
+.list-items{
+  border: 2px solid gray;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.learn{
+  
+}
+.course-details-point{
+ margin: 20px;
+}
+.detailse{
+ display: flex;
+ align-items: center;
 }
 @media screen and (min-width:1000px) {
   .details{
@@ -49,16 +68,19 @@
   }
   .auth-body{
     display: flex;
-    height: 400px;
+    height: 510px;
     min-width: 1000px;
   }
-
   .auth-images{
-    height: 600px;
-    width: 500px;
+    width: 600px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 300px;
 
+  }
+  .imes-auth img{
+    height: 480px;
+    margin: 10px;
+    border-radius: 5px;
   }
 }
