@@ -35,6 +35,7 @@ const Context = ({ children }) => {
   };
 
 const loginWithGithub = () =>{
+  setLoader(true)
   return signInWithPopup(auth, gitHubProvider)
 }
   const sineinWithEmailPass = (email, password) => {
@@ -48,13 +49,10 @@ const loginWithGithub = () =>{
   };
 
   useEffect(() => {
-    const unsubscrib = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
-        setLoader(false);
-        return setUser(user);
-      }
-      setUser("user is Signed out");
+    const unsubscrib = onAuthStateChanged(auth, (currentUser) => {
+     setLoader(false);
+     setUser(currentUser);
+    
     });
     return () => {
       unsubscrib();

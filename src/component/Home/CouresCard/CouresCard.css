@@ -62,9 +62,20 @@
   .course-img{
     width:500px;
   }
+  
 }
 @media screen and (max-width: 800px) {
+  .cart-body{
+    width: 300px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow:0 25px 25px rgba(0,0,0,0.1);
+   }
   .course-img{
-    width:500px;
+    
+    width:400px;
   }
 }

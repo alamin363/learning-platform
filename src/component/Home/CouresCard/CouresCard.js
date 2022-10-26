@@ -1,12 +1,10 @@
 import React from "react";
 import "./CouresCard.css";
-import { FaStar,FaStarHalf } from 'react-icons/fa';
+import { FaArrowRight, FaStar,FaStarHalf } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { authContext } from "../../../context/Context";
 
 const CouresCard = ({ data }) => {
-  const { id, ImgUrl, title, Instructor,  rating,  auth } =
+  const { id, ImgUrl, title, Instructor,  rating} =
     data;
   return (
     <div className="fullpage">
@@ -22,7 +20,7 @@ const CouresCard = ({ data }) => {
           <p className="underLine"></p>
           <h4 className="title rating">Rating: {rating} <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalf /></h4>
           <div><Link to={`/course/${id}`}
-           className="btn-course">Show Details</Link></div>
+           className="btn-course">Show Details <FaArrowRight /></Link></div>
         </div>
       </div>
     </div>
