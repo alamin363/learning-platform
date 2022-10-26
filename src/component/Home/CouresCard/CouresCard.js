@@ -8,8 +8,6 @@ import { authContext } from "../../../context/Context";
 const CouresCard = ({ data }) => {
   const { id, ImgUrl, title, Instructor,  rating,  auth } =
     data;
-  console.log(data);
-  console.log(auth, id);
   return (
     <div className="fullpage">
       <div className="cart-body">

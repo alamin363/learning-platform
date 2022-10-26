@@ -5,7 +5,7 @@ import './Course.css'
 
 const Course = () => {
   const data = useLoaderData();
-  console.log(data)
+  // console.log(data)
   return (
     <div className='component-course'>
       {data.map(singleCoures => <CouresCard key={singleCoures.id} data={singleCoures}/>)}

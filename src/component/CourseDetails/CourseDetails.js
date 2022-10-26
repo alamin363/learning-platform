@@ -1,12 +1,12 @@
 import React from "react";
-import { FaFileWord, FaHome, FaProjectDiagram, FaRProject, FaStar, FaStarHalf, FaTelegramPlane, FaWordpress } from "react-icons/fa";
+import { Fa500Px, FaFileWord, FaHome, FaProjectDiagram, FaRProject, FaStar, FaStarHalf, FaTelegramPlane, FaWordpress } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import "./CourseDetails.css";
 const CourseDetails = () => {
   const data = useLoaderData();
   const { detels, title, Instructor, learn, price, auth, rating } = data;
  const handelUser = () =>{
-   alert("cong")
+   alert("cong The Dev")
   }
   return (
     <>
@@ -27,8 +27,8 @@ const CourseDetails = () => {
          <Link className="btn-addToCart" onClick={handelUser}>Add to Cart</Link>
          </div>
          <div>
-          <h4>60-Day Money-Back Guarantee</h4>
-         <p>Full Lifetime Access</p>
+          <h4><Fa500Px /> 60-Day Money-Back Guarantee</h4>
+         <p><Fa500Px /> Full Lifetime Access</p>
           </div>
         </div>
       </div>

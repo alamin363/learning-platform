@@ -1,11 +1,14 @@
 import React from 'react';
 import './Header.css'
+import Book from '../../Utility/download.jpg'
 const Header = () => {
   return (
     <div>
-      <h1>this is header component</h1>
+      <div className='container'>
+        
+      </div>
     </div>
-    
+
   );
 };
 

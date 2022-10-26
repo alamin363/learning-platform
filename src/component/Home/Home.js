@@ -7,7 +7,6 @@ import CouresCard from './CouresCard/CouresCard';
 import './Home.css'
 const Home = () => {
   const data = useLoaderData()
-  console.log(data)
   const {name} = useContext(authContext);
 
   return (

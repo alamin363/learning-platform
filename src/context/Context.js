@@ -22,6 +22,7 @@ const Context = ({ children }) => {
   
   const [user, setUser] = useState("");
   const [loader, setLoader] = useState(true);
+  
   const googleProvider = new GoogleAuthProvider();
   const gitHubProvider = new GithubAuthProvider();
   const SigninWithGoogle =() =>{
@@ -46,7 +47,7 @@ const loginWithGithub = () =>{
       if (user) {
         const uid = user.uid;
         setLoader(false);
-        return setUser();
+        return setUser(user);
       }
       setUser("user is Signed out");
     });
