@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { authContext } from "../../context/Context";
 import "./Navber.css";
 const Navber = () => {
-  const [toggole, setToggole] = useState(true)
+  const [toggole, setToggole] = useState(true);
   const { user, sineOut } = useContext(authContext);
   const handelLogOut = () => {
     sineOut()
@@ -41,7 +41,9 @@ const Navber = () => {
           </span>
         )}
 
-        <Link onClick={() => setToggole(!toggole)}>{toggole ? <FaLightbulb /> : <FaRegLightbulb />}</Link>
+        <Link onClick={() => setToggole(!toggole)}>
+          {toggole ? <FaLightbulb /> : <FaRegLightbulb />}
+        </Link>
       </div>
     </div>
   );
