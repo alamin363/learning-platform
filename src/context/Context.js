@@ -19,7 +19,7 @@ import app from "../component/Firebase/Firebase.config";
 const auth = getAuth(app);
 export const authContext = createContext();
 const Context = ({ children }) => {
-
+  
   const [user, setUser] = useState("");
   const [loader, setLoader] = useState(true);
   const googleProvider = new GoogleAuthProvider();
@@ -81,7 +81,7 @@ const loginWithGithub = () =>{
     addUserNameAndImg,
     veryficationEmail,
     SigninWithGoogle,
-    loginWithGithub
+    loginWithGithub,
   };
   return (
     <authContext.Provider value={contextInfo}>{children}</authContext.Provider>

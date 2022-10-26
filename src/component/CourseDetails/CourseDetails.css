@@ -1,0 +1,64 @@
+.details{
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPy_jT10YLOX4_BAPxvpdGSGPhiAWRr3yWIQ&usqp=CAU);
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+
+.auth-body{
+ width: 500px;
+  /* min-width:400px; */
+  /* height: 700px; */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow:0 25px 25px rgba(0,0,0,0.1);
+ }
+ .auth-images{
+  height: 700px;
+  width: 500px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.details-auth{
+  margin-left: 5px;
+  color: white;
+}
+.titel{
+  font-size: 25px;
+}
+.city{
+  margin-bottom: 30px;
+}
+.btn-addToCart{
+  border:2px solid ;
+  text-align: center;
+  color: white;
+}
+.btn-addToCart>a{
+ color: white;
+ text-decoration: none;
+}
+@media screen and (min-width:1000px) {
+  .details{
+    background: gray;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  .auth-body{
+    display: flex;
+    height: 400px;
+    min-width: 1000px;
+  }
+
+  .auth-images{
+    height: 600px;
+    width: 500px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 300px;
+
+  }
+}
