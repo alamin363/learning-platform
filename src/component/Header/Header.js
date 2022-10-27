@@ -1,13 +1,35 @@
-import React from 'react';
-import './Header.css'
-import Book from '../../Utility/coder.jpg'
+import React from "react";
+import "./Header.css";
+import {
+  FaFileDownload,
+  FaHighlighter,
+  FaHips,
+  FaNetworkWired,
+  FaSnowman,
+} from "react-icons/fa";
+import Book from "../../Utility/download.jpg";
+import { useContext } from "react";
+import { authContext } from "../../context/Context";
 const Header = () => {
+  const { user } = useContext(authContext);
+  console.log(user);
   return (
-      <div className='container'>
-       {/* <img src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPYTZlc0oTmUmhbfhitREOpB0npameCO6MHA&usqp=CAU`} alt="" /> */}
-       <img src={Book} alt="" />
+    <div className="container">
+    <div className="img-user">
+      <img src={Book} alt="" />
+    </div>
+      <div className="titel">
+      <h2>
+        Welcome Dev <FaHighlighter />{" "}
+        {user?.uid ? user.displayName : <FaSnowman />}
+      </h2>
+      <h3>Learn And Destruction Your Secret </h3>
+      <h4>Last Goooooooooooooooo</h4>
+      <h3>
+        This Is The Time To Learn <FaNetworkWired />
+      </h3>
       </div>
-
+    </div>
   );
 };
 
