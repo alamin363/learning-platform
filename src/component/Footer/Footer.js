@@ -12,9 +12,10 @@ const Footer = () => {
         </h2>
         <div className="footer-container">
           <div className="list-1">
-            <Link to={`https://web.facebook.com/alaminislam365/`}>
+            <Link from={`https://web.facebook.com/alaminislam365/`}>
               About us <FaArrowRight />
             </Link>
+          
             <Link>
               Get the app <FaArrowRight />
             </Link>
