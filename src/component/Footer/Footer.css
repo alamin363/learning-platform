@@ -1,0 +1,42 @@
+
+.footer{
+  background-color:#1C1D1F ;
+  color: white;
+
+}
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+.title-foter{
+  margin-left: 10px;
+}
+.serves{
+
+}
+.list-1{
+ display: flex;
+ flex-direction: column;
+}
+.list-2{
+  display: flex;
+  flex-direction: column;
+}
+.list-3{
+  display: flex;
+  flex-direction: column;
+}
+.list-4{
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  .footer-container{
+    display:block;
+    margin: 10px;
+  }
+  .list-4{
+    display: block;
+  }
+}
