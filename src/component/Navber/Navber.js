@@ -19,8 +19,12 @@ const Navber = () => {
         <Link className="name-web" to="/">
           <FaCode /> Programer
         </Link>
+       
       </div>
       <div className="nave-link">
+      <Link className="faq-btn" to="/faq">
+          FAQ
+        </Link>
         <Link to="/blog">Blog</Link>
         <Link to="/course">Course</Link>
         <Link className="btn-register" to="/register">

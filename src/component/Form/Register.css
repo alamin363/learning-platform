@@ -1,9 +1,13 @@
+.form-register{
+ margin-top: 100px;
+}
  form{
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  height: 80vh;
 }
 .btn-rg,.inputs{
   padding: 10px 90px;
@@ -20,3 +24,8 @@
   width: 240px;
   background-color: black;
 }  
+@media screen and (max-width:800px) {
+  form{
+   height: 30%;
+  }
+}

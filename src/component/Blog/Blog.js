@@ -1,5 +1,5 @@
 import React from "react";
-import { FaQuestion } from "react-icons/fa";
+import { FaAlignRight, FaAngleRight, FaQuestion, FaQuestionCircle } from "react-icons/fa";
 import "./Blog.css";
 
 const Blog = () => {
@@ -27,10 +27,11 @@ const Blog = () => {
   ];
   console.log(data);
   return (
-   <div>
+   <div className="blog-card">
         {data.map(dt => <div key={dt.id} className="singlecard">
-          <h2>{dt.qursen}</h2>
-          <h4>Ans: {dt.ans}</h4>
+          <h2 className="title"><FaQuestionCircle /> {dt.qursen}</h2>
+          <p className="underline"></p>
+          <h4 className="title">Ans:<FaAngleRight /> {dt.ans}</h4>
           <br />
         </div>)}
       </div>

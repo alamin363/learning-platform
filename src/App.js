@@ -9,6 +9,8 @@ import Login from "./component/Form/Login";
 import Register from "./component/Form/Register";
 import CourseDetails from "./component/CourseDetails/CourseDetails";
 import PrivetRout from "./component/PrivetRout/PrivetRout";
+import Error from "./component/Error/Error";
+import Faq from "./component/Faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +35,9 @@ const router = createBrowserRouter([
         loader: () => fetch("https://backend-cores-server-alaminpk360.vercel.app/"),
         element: <Course />,
       },
+      {path:'/faq' , element: <Faq />},
       { path: "/register", element: <Register /> },
-      { path: "*", element: <h1>this is error page</h1> }
+      { path: "*", element: <Error /> }
     ],
   },
 ]);

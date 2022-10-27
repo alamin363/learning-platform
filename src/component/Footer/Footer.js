@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight, FaGofore, FaRegCompass } from "react-icons/fa";
+import { FaArrowRight, FaCode, FaRegCompass } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 const Footer = () => {
@@ -39,11 +39,11 @@ const Footer = () => {
             <Link>
               Investors <FaArrowRight />
             </Link>
+          </div>
+          <div className="list-3">
             <Link>
               Terms <FaArrowRight />
             </Link>
-          </div>
-          <div className="list-3">
             <Link>
               Privacy Policy <FaArrowRight />
             </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="list-4">
-        <h1>Programer</h1>
+        <Link to="/"> <FaCode /> Programer</Link>
         <p>©2022 Programer, Inc.</p>
       </div>
     </div>

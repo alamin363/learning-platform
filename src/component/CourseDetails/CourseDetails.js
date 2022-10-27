@@ -15,18 +15,22 @@ import "./CourseDetails.css";
 const ref = React.createRef();
 const CourseDetails = () => {
   const data = useLoaderData();
-  
+
   const { detels, title, Instructor, learn, price, auth, rating } = data;
   const handelUser = () => {
     alert("cong The Dev");
   };
 
   return (
-    <>
-     <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button className="btn-pdf" onClick={toPdf}>Download PDF <FaFileDownload /></button>}
+    <div ref={ref}>
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => (
+          <button className="btn-pdf" onClick={toPdf}>
+            Download PDF <FaFileDownload />
+          </button>
+        )}
       </Pdf>
-      <div className="details" ref={ref}>
+      <div className="details">
         <div className="auth-body">
           <div className="imes-auth">
             <img className="auth-images" src={auth} alt="" />
@@ -67,7 +71,7 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-      <main className="course-details-point" ref={ref}>
+      <main className="course-details-point">
         <h1>What you'll learn</h1>
         <div className="list-items">
           {learn.map((lrn) => (
@@ -80,7 +84,7 @@ const CourseDetails = () => {
           ))}
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

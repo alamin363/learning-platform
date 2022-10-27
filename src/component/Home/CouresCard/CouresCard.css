@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
  .fullpage{
-  /* background-color: gray;
-  background-image: url(); */
-  /* background-size: cover;
-  background-position: center;
-  min-height: 100vh; */
   display: grid;
   justify-items: center;
   /* grid-template-columns: repeat(2, 2fr); */

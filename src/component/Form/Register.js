@@ -20,10 +20,9 @@ const Register = () => {
         const user = result.user;
         const profile = { displayName: name, photoURL: photo };
         addUserNameAndImg(profile).then(() => {
-          /*profile updete */varyFyEmail()
-        });
-        console.log(user);
-        
+          /*profile updete */
+          varyFyEmail()
+        }); 
         form.reset();
       })
       .catch((error) => {
@@ -38,7 +37,7 @@ const Register = () => {
   }
 
   return (
-    <div>
+    <div className="form-register">
       <form onSubmit={handelSubmit}>
         <h4>Sign up and start learning</h4>
         <input
@@ -46,12 +45,14 @@ const Register = () => {
           name="name"
           placeholder="Full Name"
           type="text"
+          required
         />
         <input
           className="inputs"
           name="carbon"
           placeholder="Photo Url"
           type="text"
+          required
         />
         <input
           className="inputs"
@@ -65,6 +66,7 @@ const Register = () => {
           name="password"
           placeholder="Password"
           type="password"
+          required
         />
         <div className="underline"></div>
         <button className="btn-rg">Register Now</button>

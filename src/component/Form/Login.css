@@ -42,3 +42,9 @@
   width: 245px;
   background-color: blueviolet;
 }
+.error{color: red;}
+@media screen and (max-width:800px) {
+  .email{
+    display: none;
+  }
+}

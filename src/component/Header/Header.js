@@ -5,6 +5,7 @@ import {
   FaHighlighter,
   FaHips,
   FaNetworkWired,
+  FaRunning,
   FaSnowman,
 } from "react-icons/fa";
 import Book from "../../Utility/download.jpg";
@@ -24,7 +25,7 @@ const Header = () => {
         {user?.uid ? user.displayName : <FaSnowman />}
       </h2>
       <h3>Learn And Destruction Your Secret </h3>
-      <h4>Last Goooooooooooooooo</h4>
+      <h4>Goooooooooooooooo ... <FaRunning /></h4>
       <h3>
         This Is The Time To Learn <FaNetworkWired />
       </h3>

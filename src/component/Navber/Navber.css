@@ -30,3 +30,11 @@
     font-size: 20px;
   }
 }
+@media screen and (max-width:500px) {
+  .name-web{
+    font-size: 15px;
+  }
+  .nave-link a{
+    font-size: 15px;
+  }
+}
